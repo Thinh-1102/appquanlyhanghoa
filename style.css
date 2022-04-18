@@ -58,7 +58,7 @@
     justify-content: center;
     background-color: #fff;
     z-index: 1;
-    padding: 10px 0;
+    padding-bottom: 10px;
 }
 
 .add-input__name,

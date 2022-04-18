@@ -17,7 +17,9 @@ goods.push(new goodsObj('cam','siêu ngọt'),new goodsObj('xoài','siêu chua')
 var resultFull = document.querySelector('.full-result')
 //list btn
 function list() {
-    resultFull.classList.add('open')
+    createListGoods(goods)
+    resultFull.classList.add('open');
+    addInput.classList.remove('open')
 }
 
 //closebtn
@@ -29,6 +31,7 @@ function closebtn() {
 function access() {
     goods.push(new goodsObj(goodsName, goodsNote));
     createListGoods(goods)
+    addInput.classList.remove('open')
 }
 
 //cancer btn
@@ -39,6 +42,7 @@ function access() {
 //add btn
 function add() {
     addInput.classList.add('open')
+    resultFull.classList.remove('open');
 }
 
 function addInputClose() {
@@ -61,7 +65,8 @@ function search(){
         return e.name === searchValue
     })
     createListGoods(resultValue);
-    resultFull.classList.add('open')
+    resultFull.classList.add('open');
+    addInput.classList.remove('open')
 }
 
 //edit btn
