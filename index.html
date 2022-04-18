@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        
+    </style>
+    <div class="container">
+        <div class="app">
+            <input type="text" class="input-item" placeholder="Nhập tên món hàng vào đây">
+            <div class="search-icon app__icon" onclick="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="add-icon app__icon" onclick="add()">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="list-icon app__icon" onclick="list()">
+                <i class="fa-solid fa-list"></i>
+            </div>
+            <div class="full-item"></div>
+            <div class="add-input">
+                <div class="add-input__name">
+                    <span class="add-input__name-heading text-B">NHẬP TÊN SẢN PHẨM</span>
+                    <input type="text" class="input-name">
+                </div>
+                <div class="add-input__note">
+                    <span class="add-input__name-node text-B">MIÊU TẢ</span>
+                    <textarea class="input-note" cols="30" rows="5"></textarea>
+                </div>
+                <div class="add-input__btns">
+                    <button onclick="cancer()" class="input__btn">
+                        CANCER
+                    </button>
+                    <button onclick="access()" class="input__btn">
+                        ACCESS
+                    </button>
+                </div>
+                <div class="close-btn">
+                    <i class="fa-solid fa-xmark" onclick="addInputClose()"></i>
+                </div>
+            </div>
+        </div>
+        <div class="full-result">
+            <div class="full-result-heading">
+                <h1>LIST ITEM</h1>
+            </div>
+            <div class="result"></div>
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark" onclick="closebtn()"></i>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
