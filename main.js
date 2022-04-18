@@ -11,8 +11,9 @@ var result = document.querySelector('.result')
 var goods = [];
 function goodsObj(name, note) {
     this.name = name,
-        this.note = note
+    this.note = note
 }
+goods.push(new goodsObj('cam','siêu ngọt'),new goodsObj('xoài','siêu chua'))
 var resultFull = document.querySelector('.full-result')
 //list btn
 function list() {
