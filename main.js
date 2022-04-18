@@ -86,15 +86,28 @@ function createListGoods(arr) {
     arr.map((e, i) => {
         return result.innerHTML += `<div id="${i}" class="result__item">
         <div class="result__item-group">
-            <div class="result__item-name">${arr[i].name}</div>
+            <div class="result__item-name">
+            ${arr[i].name}
+            <i class="fa-solid fa-caret-down" onclick="detail(this)"></i>
+            </div>
             <div class="result__item-icon">
                 <i class="fa-solid fa-pencil" onclick="edit(this)"></i>
                 <i class="fa-solid fa-trash-can" onclick="deletebtn(this)"></i>
             </div>
-            </div>
+        </div>
             <div class="result__item-note">
                 <span>${arr[i].note}</span>
             </div>
     </div>`
     })
+}
+var overed = true;
+function detail(e){
+    if(overed){
+        e.parentElement.parentElement.parentElement.children[1].classList.add('open');
+        return overed =false;
+    }else{
+        e.parentElement.parentElement.parentElement.children[1].classList.remove('open');
+        return overed =true;
+    }
 }
